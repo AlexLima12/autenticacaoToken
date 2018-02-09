@@ -29,6 +29,11 @@ namespace modelobasicoefjwt.Models
         [DataType(DataType.Date)]
         public DateTime DataNascimento { get; set; }
 
+        [Required]
+        [StringLength(14, MinimumLength=11)]
+        public string CPF { get; set; }
+        
+
         public ICollection<UsuarioPermissao> UsuariosPermissoes { get; set; }
     }
 }
